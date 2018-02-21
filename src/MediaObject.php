@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kozlenko.v
- * Date: 21.02.2018
- * Time: 14:21
- */
-
 namespace JsonLd;
 
 class MediaObject extends CreativeWork

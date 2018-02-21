@@ -35,6 +35,11 @@ class CreativeWork extends Thing
     private $dateModified;
 
     /**
+     * @var string
+     */
+    private $text;
+
+    /**
      * @return Organization
      */
     public function getProvider(): Organization
@@ -156,6 +161,10 @@ class CreativeWork extends Thing
 
         if ($this->provider) {
             $data['provider'] = $this->provider;
+        }
+
+        if ($this->text) {
+            $data['text'] = $this->text;
         }
 
         return $data + parent::getProperties();

@@ -1,0 +1,22 @@
+{
+  "name": "wumvi/jsonld",
+  "description": "Json Ld",
+  "autoload": {
+    "psr-4": {
+      "JsonLd\\": "src"
+    }
+  },
+  "require": {
+    "php": "~7.1"
+  },
+  "config": {
+    "secure-http": false
+  },
+  "authors": [
+    {
+      "name": "Kozlenko Vitaliy",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT"
+}

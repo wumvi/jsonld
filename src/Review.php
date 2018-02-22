@@ -69,13 +69,18 @@ class Review extends CreativeWork
 
     public function getProperties(): array
     {
-        $data = [
-            'itemReviewed' => $this->itemReviewed,
-            'reviewBody' => $this->reviewBody,
-        ];
+        $data = [];
 
         if ($this->reviewRating) {
             $data['reviewRating'] = $this->reviewRating;
+        }
+
+        if ($this->reviewBody) {
+            $data['reviewBody'] = $this->reviewBody;
+        }
+
+        if ($this->itemReviewed) {
+            $data['itemReviewed'] = $this->itemReviewed;
         }
 
         return $data + parent::getProperties();

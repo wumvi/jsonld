@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kozlenko.v
- * Date: 21.02.2018
- * Time: 15:24
- */
+declare(strict_types=1);
 
 namespace JsonLd;
 

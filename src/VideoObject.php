@@ -16,10 +16,15 @@ class VideoObject extends MediaObject
 
     public function getProperties(): array
     {
-        $data = [
-            'caption' => $this->caption,
-            'thumbnail' => $this->thumbnail,
-        ];
+        $data = [];
+
+        if ($this->caption) {
+            $data['caption'] = $this->caption;
+        }
+
+        if ($this->thumbnail) {
+            $data['thumbnail'] = $this->thumbnail;
+        }
 
         return $data + parent::getProperties();
     }

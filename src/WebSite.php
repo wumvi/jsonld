@@ -11,9 +11,11 @@ class WebSite extends CreativeWork
 
     public function getProperties(): array
     {
-        $data = [
-            'searchAction' => $this->searchAction,
-        ];
+        $data = [];
+
+        if ($this->searchAction) {
+            $data['searchAction'] = $this->searchAction;
+        }
 
         return $data + parent::getProperties();
     }

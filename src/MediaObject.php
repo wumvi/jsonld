@@ -68,11 +68,15 @@ class MediaObject extends CreativeWork
 
     public function getProperties(): array
     {
-        $data = [
-            'contentUrl' => $this->contentUrl,
-            'width' => $this->width,
-            'height' => $this->height,
-        ];
+        $data = ['contentUrl' => $this->contentUrl];
+
+        if ($this->height) {
+            $data['height'] = $this->height;
+        }
+
+        if ($this->width) {
+            $data['width'] = $this->width;
+        }
 
         return $data + parent::getProperties();
     }

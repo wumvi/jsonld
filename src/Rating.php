@@ -96,8 +96,11 @@ class Rating extends Thing
             'ratingValue' => $this->ratingValue,
             'worstRating' => $this->worstRating,
             'bestRating' => $this->bestRating,
-            'author' => $this->author,
         ];
+
+        if ($this->author) {
+            $data['author'] = $this->author;
+        }
 
         return $data + parent::getProperties();
     }

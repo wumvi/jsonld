@@ -69,11 +69,19 @@ class ImageObject extends MediaObject
 
     public function getProperties(): array
     {
-        $data = [
-            'caption' => $this->caption,
-            'representativeOfPage' => $this->representativeOfPage,
-            'thumbnail' => $this->thumbnail,
-        ];
+        $data = [];
+
+        if ($this->representativeOfPage) {
+            $data['representativeOfPage'] = $this->representativeOfPage;
+        }
+
+        if ($this->thumbnail) {
+            $data['thumbnail'] = $this->thumbnail;
+        }
+
+        if ($this->caption) {
+            $data['caption'] = $this->caption;
+        }
 
         return $data + parent::getProperties();
     }

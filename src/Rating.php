@@ -94,12 +94,18 @@ class Rating extends Thing
     {
         $data = [
             'ratingValue' => $this->ratingValue,
-            'worstRating' => $this->worstRating,
-            'bestRating' => $this->bestRating,
         ];
 
         if ($this->author) {
             $data['author'] = $this->author;
+        }
+
+        if ($this->bestRating) {
+            $data['bestRating'] = $this->bestRating;
+        }
+
+        if ($this->worstRating) {
+            $data['worstRating'] = $this->worstRating;
         }
 
         return $data + parent::getProperties();

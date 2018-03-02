@@ -118,7 +118,7 @@ class Question extends CreativeWork
         }
 
         if ($this->answerCount) {
-            $data['answerCoun'] = $this->answerCount;
+            $data['answerCount'] = $this->answerCount;
         }
 
         if ($this->downvoteCount) {
